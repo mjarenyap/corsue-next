@@ -5,7 +5,7 @@ export default function LoginPage() {
   return (
     <>
       <PlasmicComponent component="List" />
-      <Button>Login</Button>
+      <Button>Create an account</Button>
     </>
   );
 }

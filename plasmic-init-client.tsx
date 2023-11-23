@@ -2,6 +2,7 @@
 
 import { PlasmicRootProvider } from "@plasmicapp/loader-nextjs";
 import { PLASMIC } from "./plasmic-init";
+import { Button } from "./components/ui/button";
 
 // You can register any code components that you want to use here; see
 // https://docs.plasmic.app/learn/code-components-ref/
@@ -11,6 +12,13 @@ import { PLASMIC } from "./plasmic-init";
 // https://docs.plasmic.app/learn/app-hosting/#set-a-plasmic-project-to-use-your-app-host
 
 // PLASMIC.registerComponent(...);
+PLASMIC.registerComponent(Button, {
+  name: "Button",
+  props: {
+    variant: "string",
+    children: "slot",
+  },
+});
 
 /**
  * PlasmicClientRootProvider is a Client Component that passes in the loader for you.
