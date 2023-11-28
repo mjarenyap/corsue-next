@@ -44,6 +44,9 @@ PLASMIC.registerComponent(Input, {
 
 PLASMIC.registerComponent(Card, {
   name: "Card",
+  props: {
+    chidlren: "slot",
+  },
 });
 
 PLASMIC.registerComponent(CardHeader, {
