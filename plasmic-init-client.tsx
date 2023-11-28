@@ -104,7 +104,12 @@ PLASMIC.registerComponent(SelectField, {
   },
 });
 
-PLASMIC.substituteComponent(Textarea, "Textarea");
+PLASMIC.registerComponent(Textarea, {
+  name: "Textarea",
+  props: {
+    placeholder: "string",
+  },
+});
 
 PLASMIC.registerToken({
   name: "brand",
