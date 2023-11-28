@@ -6,6 +6,8 @@ import { Button } from "./components/ui/button";
 import { Input } from "./components/ui/input";
 import { Card, CardFooter, CardHeader, CardTitle } from "./components/ui/card";
 import { Label } from "./components/ui/label";
+import SelectField from "./components/select";
+import { Textarea } from "./components/ui/textarea";
 
 // You can register any code components that you want to use here; see
 // https://docs.plasmic.app/learn/code-components-ref/
@@ -90,6 +92,19 @@ PLASMIC.registerComponent(Label, {
     },
   },
 });
+
+PLASMIC.registerComponent(SelectField, {
+  name: "SelectField",
+  props: {
+    label: "string",
+    placeholder: "string",
+    items: {
+      type: "object",
+    },
+  },
+});
+
+PLASMIC.substituteComponent(Textarea, "Textarea");
 
 PLASMIC.registerToken({
   name: "brand",
