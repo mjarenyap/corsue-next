@@ -56,6 +56,13 @@ PLASMIC.registerComponent(CardHeader, {
   },
 });
 
+PLASMIC.registerComponent(CardHeader, {
+  name: "CardContent",
+  props: {
+    children: "slot",
+  },
+});
+
 PLASMIC.registerComponent(CardTitle, {
   name: "CardTitle",
   props: {
