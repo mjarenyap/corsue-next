@@ -18,10 +18,11 @@ export default function LoginPage() {
       password: formData.get("password"),
     });
   };
+
   return (
     <main className="p-8">
       <form action={handleLogin}>
-        <Card className=" max-w-sm mx-auto">
+        <Card className="max-w-sm mx-auto">
           <CardHeader>
             <CardTitle>Welcome back!</CardTitle>
           </CardHeader>
