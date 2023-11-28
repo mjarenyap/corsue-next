@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { PlasmicComponent } from "@plasmicapp/loader-nextjs";
 
 export default function LoginPage() {
   const handleLogin = async (formData: FormData) => {
@@ -21,7 +22,7 @@ export default function LoginPage() {
 
   return (
     <main className="p-8">
-      <form action={handleLogin}>
+      <form action={handleLogin} className="mb-9">
         <Card className="max-w-sm mx-auto">
           <CardHeader>
             <CardTitle>Welcome back!</CardTitle>
@@ -45,6 +46,29 @@ export default function LoginPage() {
             <Button type="submit">Login</Button>
           </CardFooter>
         </Card>
+      </form>
+      <form action={handleLogin}>
+        <PlasmicComponent
+          component="LoginForm"
+          componentProps={{
+            root: {
+              props: {
+                className: "mx-auto max-w-sm",
+              },
+            },
+            title: {
+              props: {
+                children: "Welcome back!",
+              },
+            },
+            usernameField: {
+              props: {
+                defaultValue: "asdfsa",
+                disabled: true,
+              },
+            },
+          }}
+        />
       </form>
     </main>
   );

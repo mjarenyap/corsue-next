@@ -91,6 +91,13 @@ PLASMIC.registerComponent(Label, {
   },
 });
 
+PLASMIC.registerToken({
+  name: "brand",
+  displayName: "Brand",
+  value: "#4B68FE",
+  type: "color",
+});
+
 /**
  * PlasmicClientRootProvider is a Client Component that passes in the loader for you.
  *
