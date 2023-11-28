@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import SelectField from "@/components/select";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { PlasmicComponent } from "@plasmicapp/loader-nextjs";
@@ -32,13 +33,34 @@ export default function LoginPage() {
               <Label htmlFor="username">Username</Label>
               <Input name="username" id="username" placeholder="Username" />
             </div>
-            <div>
+            <div className="mb-3">
               <Label htmlFor="password">Password</Label>
               <Input
                 name="password"
                 id="password"
                 type="password"
                 placeholder="Password"
+              />
+            </div>
+            <div>
+              <SelectField
+                label="Scheduled date"
+                name="scheduledDate"
+                placeholder="Select a date"
+                items={[
+                  {
+                    value: "today",
+                    label: "Today",
+                  },
+                  {
+                    value: "next_week",
+                    label: "Next week",
+                  },
+                  {
+                    value: "next_month",
+                    label: "Next month",
+                  },
+                ]}
               />
             </div>
           </CardContent>
