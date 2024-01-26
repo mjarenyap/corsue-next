@@ -1,0 +1,40 @@
+{
+  "$schema": "https://wixplosives.github.io/codux-config-schema/codux.config.schema.json",
+  "boardGlobalSetup": "./boards-global-setup.ts",
+  "styling": { "solution": "css" },
+  "fileNamingConvention": "pascal-case",
+  "formatting": {
+    "formatSettings": {
+      "indentSize": 2,
+      "tabSize": 2,
+      "newLineCharacter": "\n",
+      "convertTabsToSpaces": true,
+      "indentStyle": "2",
+      "insertSpaceAfterConstructor": false,
+      "insertSpaceAfterCommaDelimiter": true,
+      "insertSpaceAfterSemicolonInForStatements": true,
+      "insertSpaceBeforeAndAfterBinaryOperators": true,
+      "insertSpaceAfterKeywordsInControlFlowStatements": true,
+      "insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+      "insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+      "insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+      "insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+      "insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": false,
+      "insertSpaceAfterOpeningAndBeforeClosingJsxExpressionBraces": false,
+      "insertSpaceBeforeFunctionParenthesis": false,
+      "placeOpenBraceOnNewLineForFunctions": false,
+      "placeOpenBraceOnNewLineForControlBlocks": false,
+      "semicolons": "ignore",
+      "trimTrailingWhitespace": true
+    }
+  },
+  "resolve": {
+    "alias": {
+      "@/public/*": "./public/*",
+      "@/*": "./app/*"
+    }
+  },
+  "newComponent": {
+    "componentsPath": "components"
+  }
+}
